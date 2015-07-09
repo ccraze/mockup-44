@@ -4,27 +4,31 @@ $(->
   $searchDialog = $('.category-header-search')
   $basicSearch = $('.category-header-line1 .basic-search')
 
-  hideSearchDialog = ->
+  hideSearchDialog = (event) ->
+    event?.preventDefault()
+
     $searchDialog.hide('fast');
     $searchDialog.data('state', 'hide')
-    #$searchToggle.parent().css('border-color', '#bef67e')
     $basicSearch.css('border-color': '#bef67e')
+
     return
 
-  showSearchDialog = ->
+  showSearchDialog = (event) ->
+    event?.preventDefault()
+
     $searchDialog.show('fast');
     $searchDialog.data('state', 'show')
-    #$searchToggle.parent().css('border-color', '#6a9a2a')
     $basicSearch.css('border-color': '#6a9a2a')
+
     return
 
   toggleSearchDialog = (event) ->
-    event.preventDefault()
+    event?.preventDefault()
 
     if ($searchDialog.data('state') == 'show')
-      hideSearchDialog()
+      hideSearchDialog(event)
     else
-      showSearchDialog()
+      showSearchDialog(event)
 
     return
 
