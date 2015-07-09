@@ -1,0 +1,500 @@
+$white: #fff;
+$gray1: #777;
+$purple1: #8d44c7;
+$purple2: #c077fa;
+$purple3: #551a8b;
+$purple4: #203;
+$c0: #8dc44c;
+$c1: #bef67e;
+$c2: #d8ff98;
+$c3: #efffd6;
+$c4: #9dcd5d;
+$c5: #6a9a2a;
+//$category-sibling-header-color: #8b0000;
+$category-sibling-header-color: $purple4;
+$category-sibling-link-color: $white;
+
+$category-header-border-radius: 5px;
+$grid-width: 998px; // for full-width elements that
+                    // aren't using the grid. mostly because
+                    // it took me a while to understand the
+                    // grid system.
+
+/*
+ * Begin styles that are intended to replace current
+ * costumecraze.com styles. These are not new selectors.
+ * These styles change existing elements on the website.
+ */
+
+/* add 'Carlito' to the font stack.
+ * I like carlito well enough, but it's character height to
+ * line height ratio is sufficiently different from verdana's
+ * that our current typography settings, such as line-heights,
+ * clash when carlito is used as the display font. So, we do
+ * need to find another open-source alternative which has
+ * display ratios more similar to that of verdana, so long as
+ * verdana continues to be our preferred font.
+ *
+ * maybe DejaVu Sans is a good alternative.
+ *
+ * killed carlito for now. switching to dejavu sans because
+ * its ratios are more similar to verdana.
+ *
+ * also kill any letter-spacing settings. all of these fonts
+ * look odd with the letters crunched up close.
+ */
+
+*,
+#left_nav .cat_list a {
+  //font-family: 'Carlito'; // very nice, but short compared to line-height.
+  font-family: Verdana, 'DejaVu Sans', Tahoma, Geneva, Arial, Helvetica, sans-serif;
+  /*
+  font-family: 'DejaVu Sans'; // nice. possibly boring, but very easy to read
+  font-family: 'PT Sans'; // nice, but possibly a bit too thin for some contexts
+  font-family: Verdana;
+  font-family: 'Cantarell'; // nice look, but small characters for tall-ish line height
+  font-family: 'Carlito'; // very nice, but short compared to line-height.
+  font-family: 'Source Han Sans CN'; // very nice when thin at font-weight: 100
+  font-family: 'Source Han Sans TW'; // very nice when thin at font-weight: 100
+  font-family: 'Waree'; // nice look, but tall line-height
+  font-family: Geneva;
+  font-family: Arial;
+  font-family: Helvetica;
+  font-family: sans-serif;
+  */
+  letter-spacing: 0;
+}
+
+/* Give the left-nav section titles a darker background color.
+ * I think this makes the white text much easier to read.
+ */
+#left_nav .cat_title > li {
+  background-color: $c5;
+}
+
+/* The top title in the left nav is the one place I see that
+ * looks better with the tighter letter spacing. We have to
+ * re-apply the style here to undo the global chnage we made
+ * above with the `*` selector.
+ */
+#left_nav .cat_name > span {
+  letter-spacing: -1px;
+}
+
+/*
+ * Begin non-semantic helper classes
+ */
+.nowrap {
+  white-space: nowrap;
+}
+
+.bu {
+  font-weight: bold;
+  text-decoration: underline;
+}
+
+.inline-center {
+  display: inline-block;
+  text-align: center;
+}
+
+
+/*
+ * i don't think i'm using this in mockups anymore.
+ * /
+.category_name {
+
+  +div {
+    margin-top: -.67em;
+    margin-bottom: 1em;
+  }
+
+  h1 {
+    margin-top: .33em;
+    margin-bottom: .67em;
+    letter-spacing: 0;
+  }
+}
+/**/
+
+
+/*
+ * i don't think i'm using this in mockups anymore.
+ * /
+fieldset#search_fields {
+  box-sizing: border-box;
+  margin-left: 5px;
+  margin-right: 5px;
+}
+/**/
+
+
+.category-header {
+  font-size: 80%;
+  box-sizing: border-box;
+  margin-bottom: 1em;
+  //width: $grid-width;
+  position: relative;
+  width: 100%;
+
+  .category-header-line1 {
+    display: table;
+    width: 100%;
+    box-sizing: border-box;
+
+    padding-left: 1em;
+    background-color: $c1;
+    border-top-left-radius: $category-header-border-radius;
+    border-top-right-radius: $category-header-border-radius;
+    overflow: hidden;
+
+    .category-h1 {
+      display: table-cell;
+      padding: 1em 0 .7em;
+
+      h1 {
+        display: inline-block;
+        font-weight: 600;
+        padding: 0;
+        line-height: 100%;
+        font-size: 180%;
+        margin: 0 .3em 0 0;
+      }
+
+      span.results-count {
+        font-size: 120%;
+        vertical-align: 10%;
+        white-space: nowrap;
+      }
+    }
+
+    /*
+    ** These .basic-search styles are specific to the keyword
+    ** input that's above the drop-down search dialog.
+    */
+    .basic-search {
+      display: table-cell;
+      background-color: $c5;
+      padding: .3em .5em 0 .6em;
+      // border-top: 2px $c1 solid;
+      border-bottom: 1px $c1 solid;
+      border-top-right-radius: $category-header-border-radius;
+      vertical-align: bottom;
+      min-width: 20em;
+    }
+
+    // .search-toggle {
+    //   // display: table-cell;
+    //   display: none;
+    //   font-weight: bold;
+    //   font-size: 120%;
+    //   text-align: center;
+    //   vertical-align: middle;
+    //   background-color: $c5;
+    //   border-top: 2px $c1 solid;
+    //   border-bottom: 1px $c1 solid;
+    //   border-top-right-radius: $category-header-border-radius;
+    //   cursor: pointer;
+
+    //   a {
+    //     color: $white;
+    //     display: block;
+    //     height: 100%;
+    //     width: 100%;
+    //   }
+    // }
+  }
+
+  .category-header-line3 {
+    font-size: 100%;
+    background-color: $c5;
+    margin: 0;
+    padding: .5em 1em;
+    // display: table;
+    box-sizing: border-box;
+    width: 100%;
+
+    h2 {
+      color: $category-sibling-header-color;
+      // display: inline-block;
+      // display: table-cell;
+      // display: inline;
+      display: none;
+      // padding: 0 .5em 0 0;
+      font-weight: bold;
+      // text-align: right;
+      font-size: 1.1em;
+      line-height: 1.1em;
+    }
+
+    .category-siblings {
+      vertical-align: baseline;
+      // display: table-cell;
+      // display: inline-block;
+      font-size: 1.1em;
+      line-height: 1.1em;
+      // text-align: center;
+
+      .sibling {
+        display: inline-block;
+        vertical-align: baseline;
+        white-space: nowrap;
+
+        .divider {
+          color: $white;
+          // margin: .2em;
+        }
+
+        a {
+          color: $category-sibling-link-color;
+        }
+      }
+
+    }
+  }
+}
+
+.category-header-search {
+  display: none;
+  padding: .5em 1em;
+  background-color: $c3;
+  border-left: 5px $c1 solid;
+  border-right: 5px $c5 solid;
+}
+
+
+$top-nav-purple: #8660ad;
+$top-nav-text-color: #fff;
+$top-nav-border-width: 2px;
+$top-nav-divider-opacity: .2;
+$top-nav-border-radius: .5em;
+$top-nav-transition-duration: .5s;
+
+.top-nav {
+  width: $grid-width;
+  position: relative;
+  font-size: 100%;
+  line-height: 100%;
+
+  .nav-image {
+    position: absolute;
+    bottom: 35px;
+    overflow: hidden;
+    height: 0;
+    -webkit-transition: height $top-nav-transition-duration;
+    -moz-transition: height $top-nav-transition-duration;
+    -o-transition: height $top-nav-transition-duration;
+    transition: height $top-nav-transition-duration,
+                border $top-nav-transition-duration;
+    z-index: 1;
+
+    border-width: $top-nav-border-width $top-nav-border-width 0;
+    border-color: $top-nav-purple;
+    border-style: solid solid none;
+    width: $grid-width;
+    border-top-left-radius: $top-nav-border-radius;
+    border-top-right-radius: $top-nav-border-radius;
+
+    box-sizing: border-box;
+  }
+
+  .nav-text {
+    position: relative;
+    background-color: $top-nav-purple;
+    height: 35px;
+    display: table;
+    width: $grid-width;
+    overflow: hidden;
+    z-index: 2;
+    font-size: 90%;
+    line-height: 110%;
+    padding: .2em 0;
+
+    .w82 { width: 82px; }
+    .w85 { width: 85px; }
+    .w87 { width: 87px; }
+    .w88 { width: 88px; }
+    .w90 { width: 90px; }
+    .w92 { width: 92px; }
+    .w97 { width: 97px; }
+
+    a,
+    span.nav-divider {
+      display: table-cell;
+      vertical-align: middle;
+      text-align: center;
+      color: $top-nav-text-color;
+    }
+
+    span.nav-divider {
+      //visibility: hidden;
+
+      img {
+        opacity: $top-nav-divider-opacity;
+        width: 1px;
+        height: 35px;
+      }
+    }
+
+  }
+}
+
+#topside_logo {
+  position: relative;
+  width: 335px;
+  height: 70px;
+
+  a {
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: top .5s;
+  }
+}
+
+/*
+** Begin styles common to both .basic-search components
+*/
+
+.basic-search {
+
+  .search-keywords {
+    margin-top: .3em;
+    margin-bottom: .3em;
+    white-space: nowrap;
+    width: 100%;
+    display: table;
+
+    .search-input-keywords {
+      display: table-cell;
+      box-sizing: border-box;
+      height: 34px;
+      width: 100%;
+      padding: 3px .5em;
+      background-image: url('http://img.costumecraze.com/images/search_field_middle.png');
+      border: 0;
+      font-size: 110%;
+    }
+
+    .search-button-go {
+      background-image: url('http://img.costumecraze.com/images/search_field_right_purple.png');
+      background-repeat: no-repeat;
+      width: 45px;
+      height: 34px;
+      display: table-cell;
+
+      input {
+        width: 45px;
+        height: 31px;
+        background: transparent none repeat scroll 0 center;
+        border: 0 none;
+        color: $white;
+        cursor: pointer;
+        font-weight: bold;
+      }
+    }
+  }
+}
+
+/*
+** Begin styles for category-search dropdown
+**/
+
+.category-search {
+  display: table;
+  width: 100%;
+  padding-top: 1px;
+
+  a {
+    font-size: 120%;
+    font-weight: 560;
+  }
+
+  /*
+  ** These .basic-search styles are unique to
+  ** the category dropdown search dialog.
+  */
+  .basic-search {
+    // display: table-cell;
+    display: none;
+  }
+
+  .search-dialog-controls {
+    display: table-cell;
+    vertical-align: middle;
+  }
+
+  .advanced-search {
+    display: table-cell;
+
+    .advanced-search-container {
+      display: table;
+      width: 100%;
+
+      .row {
+        display: table-row;
+        font-size: 120%;
+
+        .form-label {
+          display: table-cell;
+          text-align: right;
+          padding: .1em .2em;
+          font-weight: bold;
+          cursor: pointer;
+          white-space: nowrap;
+        }
+
+        .form-field {
+          display: table-cell;
+          text-align: left;
+          padding: .1em .2em;
+          cursor: pointer;
+          color: $gray1;
+        }
+      }
+    }
+
+  }
+}
+
+
+
+/*
+ * These classes are being used in the mockup to show and hide
+ * elements, e.g. the text "Halloween" that we'd push throughout
+ * the site during Halloween-season. I don't intend for this
+ * css or any of the content that contains these classes to
+ * exist beyond this mockup period.
+ *
+ * 'unset' to show content
+ * 'none' to hide
+ */
+
+/* typically to show or hide the text "Halloween" in several locations */
+.halloween {
+  display: none;
+}
+
+/* to modify content on category pages for when the category IS NOT
+   filtered with a search. */
+.category-is-not-filtered {
+  display: unset;
+}
+
+/* to modify content on category pages for when the category IS
+   filtered with a search. */
+.category-is-filtered {
+  display: none;
+}
+
+/* to use a NON-transparent JPEG as the image above the top-nav
+   text links. */
+.nav-image-jpg {
+  display: unset;
+}
+
+/* to use a TRANSPARENT PNG as the image above the top-nav
+   text links. */
+.nav-image-png {
+  display: none;
+}

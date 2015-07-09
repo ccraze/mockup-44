@@ -1,0 +1,582 @@
+form.category-search
+
+  .basic-search
+    .search-keywords
+      input.search-input-keywords(type="text", name="searchstring", value="", placeholder="Search this category" autocomplete="OFF")
+      span.search-button-go
+        input(type="submit", value="GO")
+    .search-button-clear
+      a(href="?searchstring=") Clear search...
+    .search-button-hide
+      a(href="#hide-search-dialog") Hide search dialog...
+
+  .search-dialog-controls
+    .search-button-clear
+      a(href="?searchstring=") Clear search...
+    .search-button-hide
+      a(href="#hide-search-dialog") Hide search dialog...
+
+  .advanced-search
+    .advanced-search-container
+      .row
+        .form-label.search-age
+          | Age:
+        .form-field.search-age
+          | select...
+
+        .form-label.search-price
+          | Price:
+        .form-field.search-price
+          | select...
+
+        .form-label.search-prodtype
+          | Product Types:
+        .form-field.search-prodtype
+          | select...
+
+      .row
+        .form-label.search-gender
+          | Gender:
+        .form-field.search-gender
+          | select...
+
+        .form-label.search-discount
+          | Discount:
+        #displayed_filter_discount.form-field.search-discount
+          | select...
+
+        .form-label.search-manufacturer
+          | Manufacturer:
+        #displayed_filter_manufacturer.form-field.search-manufacturer
+          | select...
+
+      .row
+        .form-label.search-size
+          | Size:
+        .form-field.search-size
+          | select...
+
+        .form-label.search-inventory
+          | Inventory:
+        .form-field.search-inventory
+          | select...
+
+        .form-label.search-newfor
+          | New For:
+        #displayed_filter_new_for.form-field.search-newfor
+          | select...
+
+form#frm_search_v3_refine(method="get", name="frm_search_v3_refine", action="")
+  input(type="hidden", name="order_search", value="")
+  input#ssavl(type="hidden", name="ssavl", value="1436104257")
+  input(type="hidden", name="items_per_page", value="")
+
+  table#search_filters(style="display:none")
+    tr
+      td(colspan="4", style="width:100%; padding-top:6px; padding-bottom:2px;")
+        #search_field_outer
+          #search_field_left
+          #search_field_middle
+            #search_field_select_shell(style="display: none;")
+              #search_field_select_txt
+                b#search_field_cat_display Superhero Costumes
+                img(src="http://img.costumecraze.com/images/search_field_down_arr.png", style="width:10px; height:10px")
+              select#search_field_cat_select(name="search_field_cat_select")
+                option(value="") All categories
+                option(value="cat_id=1118", selected="") Superhero Costumes
+                option(value="customcat_id=1") Adult Costumes
+                option(value="cat_id=154") Baby Costumes
+                option(value="cat_id=833") Boots
+                option(value="customcat_id=27") Boys Costumes
+                option(value="cat_id=237") Capes
+                option(value="customcat_id=19") Clearance
+                option(value="cat_id=792") Contact Lenses
+                option(value="cat_id=495") Costume Jewelry
+                option(value="cat_id=132") Couples Costumes
+                option(value="customcat_id=2") Dog Costumes
+                option(value="cat_id=730") Funny Costumes
+                option(value="customcat_id=28") Girls Costumes
+                option(value="cat_id=351") Glasses
+                option(value="cat_id=498") Gloves
+                option(value="cat_id=493") Handbags
+                option(value="cat_id=339") Hats
+                option(value="customcat_id=29") Kids Costumes
+                option(value="cat_id=834") Leg Warmers
+                option(value="cat_id=438") Makeup
+                option(value="cat_id=733") Mascot Costumes
+                option(value="cat_id=413") Masks
+                option(value="customcat_id=10") Mens Costumes
+                option(value="customcat_id=26") On Sale
+                option(value="cat_id=619") Party Decorations
+                option(value="cat_id=427") Pirate Costumes
+                option(value="cat_id=65") Plus Size Costumes
+                option(value="cat_id=567") Princess Costumes
+                option(value="cat_id=9") Sexy Costumes
+                option(value="customcat_id=17") Shoes
+                option(value="cat_id=624") Stockings
+                option(value="cat_id=91") Superhero Costumes
+                option(value="customcat_id=31") Teen Costumes
+                option(value="customcat_id=30") Teenage Costumes
+                option(value="cat_id=114") Traditional Costumes
+                option(value="cat_id=293") Trick-or-Treat Bags
+                option(value="cat_id=492") Weapons & Props
+                option(value="cat_id=59") Wigs
+                option(value="customcat_id=9") Womens Costumes
+
+  #filter_class3.filterShells(style="display: none;")
+    #filter_inside_class3.filter_inside
+      div(style="width: 350px; float: left; margin: 5px;")
+        div(style="background: gray; color: white; padding: 5px; height: 20px; clear: both;")
+          label
+            span#attribute_heading_class3.option_name Age
+            span.option_num
+              // Total
+        #class3_filters.filters(style="font-size: 10pt;")
+          .option_name(title="(other)")
+            input(type="checkbox", name="search_class[class3][(other)]", id="search_class[class3][(other)]")
+            span(style="width: 100%;")
+              label(for="search_class[class3][(other)]", style="overflow: hidden; text-overflow: ellipsis;")
+                | (other)
+                span.hint
+          .option_name(title="Adult")
+            input(type="checkbox", name="search_class[class3][Adult]", id="search_class[class3][Adult]")
+            span(style="width: 100%;")
+              label(for="search_class[class3][Adult]", style="overflow: hidden; text-overflow: ellipsis;")
+                | Adult
+                span.hint
+          .option_name(title="Teen")
+            input(type="checkbox", name="search_class[class3][Teen]", id="search_class[class3][Teen]")
+            span(style="width: 100%;")
+              label(for="search_class[class3][Teen]", style="overflow: hidden; text-overflow: ellipsis;")
+                | Teen
+                span.hint
+          .option_name(title="Child")
+            input(type="checkbox", name="search_class[class3][Child]", id="search_class[class3][Child]")
+            span(style="width: 100%;")
+              label(for="search_class[class3][Child]", style="overflow: hidden; text-overflow: ellipsis;")
+                | Child
+                span.hint
+          .option_name(title="Dog")
+            input(type="checkbox", name="search_class[class3][Dog]", id="search_class[class3][Dog]")
+            span(style="width: 100%;")
+              label(for="search_class[class3][Dog]", style="overflow: hidden; text-overflow: ellipsis;")
+                | Dog
+                span.hint
+      div(style="text-align: center; float: left; width: 210px;")
+        h3 Select one or more attributes from the list
+        div(style="width: 180px; margin: 0px auto;")
+          input(type="button", value="Ok", onclick="hideDetails(); this.form.submit();")
+          input(type="button", value="Cancel", onclick="undoChanges(); hideDetails();")
+          input(type="button", value="Clear", onclick="clearOptions('class3_filters');")
+      div(style="clear: both;")
+  #filter_class4.filterShells(style="display: none;")
+    #filter_inside_class4.filter_inside
+      div(style="width: 350px; float: left; margin: 5px;")
+        div(style="background: gray; color: white; padding: 5px; height: 20px; clear: both;")
+          label
+            span#attribute_heading_class4.option_name Product Types
+            span.option_num
+              // Total
+        #class4_filters.filters(style="font-size: 10pt;")
+          .option_name(title="(other)")
+            input(type="checkbox", name="search_class[class4][(other)]", id="search_class[class4][(other)]")
+            span(style="width: 100%;")
+              label(for="search_class[class4][(other)]", style="overflow: hidden; text-overflow: ellipsis;")
+                | (other)
+                span.hint
+          .option_name(title="Costumes")
+            input(type="checkbox", name="search_class[class4][Costume]", id="search_class[class4][Costume]")
+            span(style="width: 100%;")
+              label(for="search_class[class4][Costume]", style="overflow: hidden; text-overflow: ellipsis;")
+                | Costumes
+                span.hint
+          .option_name(title="Accessories")
+            input(type="checkbox", name="search_class[class4][Accessory]", id="search_class[class4][Accessory]")
+            span(style="width: 100%;")
+              label(for="search_class[class4][Accessory]", style="overflow: hidden; text-overflow: ellipsis;")
+                | Accessories
+                span.hint
+      div(style="text-align: center; float: left; width: 210px;")
+        h3 Select one or more attributes from the list
+        div(style="width: 180px; margin: 0px auto;")
+          input(type="button", value="Ok", onclick="hideDetails(); this.form.submit();")
+          input(type="button", value="Cancel", onclick="undoChanges(); hideDetails();")
+          input(type="button", value="Clear", onclick="clearOptions('class4_filters');")
+      div(style="clear: both;")
+  #filter_class2.filterShells(style="display: none;")
+    #filter_inside_class2.filter_inside
+      div(style="width: 350px; float: left; margin: 5px;")
+        div(style="background: gray; color: white; padding: 5px; height: 20px; clear: both;")
+          label
+            span#attribute_heading_class2.option_name Gender
+            span.option_num
+              // Total
+        #class2_filters.filters(style="font-size: 10pt;")
+          .option_name(title="Female")
+            input(type="checkbox", name="search_class[class2][Female]", id="search_class[class2][Female]")
+            span(style="width: 100%;")
+              label(for="search_class[class2][Female]", style="overflow: hidden; text-overflow: ellipsis;")
+                | Female
+                span.hint
+          .option_name(title="Male")
+            input(type="checkbox", name="search_class[class2][Male]", id="search_class[class2][Male]")
+            span(style="width: 100%;")
+              label(for="search_class[class2][Male]", style="overflow: hidden; text-overflow: ellipsis;")
+                | Male
+                span.hint
+          .option_name(title="Uni")
+            input(type="checkbox", name="search_class[class2][Uni]", id="search_class[class2][Uni]")
+            span(style="width: 100%;")
+              label(for="search_class[class2][Uni]", style="overflow: hidden; text-overflow: ellipsis;")
+                | Uni
+                span.hint
+      div(style="text-align: center; float: left; width: 210px;")
+        h3 Select one or more attributes from the list
+        div(style="width: 180px; margin: 0px auto;")
+          input(type="button", value="Ok", onclick="hideDetails(); this.form.submit();")
+          input(type="button", value="Cancel", onclick="undoChanges(); hideDetails();")
+          input(type="button", value="Clear", onclick="clearOptions('class2_filters');")
+      div(style="clear: both;")
+  #filter_size.filterShells(style="display: none;")
+    #filter_inside_size.filter_inside
+      div(style="width: 350px; float: left; margin: 5px;")
+        div(style="background: gray; color: white; padding: 5px; height: 20px; clear: both;")
+          label
+            span#attribute_heading_size.option_name Size
+            span.option_num
+              // Total
+        #size_filters.filters(style="font-size: 10pt;")
+      div(style="text-align: center; float: left; width: 210px;")
+        h3 Select one or more attributes from the list
+        div(style="width: 180px; margin: 0px auto;")
+          input(type="button", value="Ok", onclick="hideDetails(); this.form.submit();")
+          input(type="button", value="Cancel", onclick="undoChanges(); hideDetails();")
+          input(type="button", value="Clear", onclick="clearOptions('size_filters');")
+      div(style="clear: both;")
+  #filter_price.filterShells(style="display: none;")
+    #filter_inside_price.filter_inside
+      div(style="width: 350px; float: left; margin: 5px;")
+        div(style="background: gray; color: white; padding: 5px; height: 20px; clear: both;")
+          label
+            span#attribute_heading_price.option_name Price
+            span.option_num
+              // Total
+        #price_filters.filters(style="font-size: 10pt;")
+          .option_name(title="$1")
+            input(type="checkbox", name="search_class[price][1]", id="search_class[price][1]")
+            span(style="width: 100%;")
+              label(for="search_class[price][1]", style="overflow: hidden; text-overflow: ellipsis;")
+                | $1
+                span.hint
+          .option_name(title="$5")
+            input(type="checkbox", name="search_class[price][5]", id="search_class[price][5]")
+            span(style="width: 100%;")
+              label(for="search_class[price][5]", style="overflow: hidden; text-overflow: ellipsis;")
+                | $5
+                span.hint
+          .option_name(title="$10")
+            input(type="checkbox", name="search_class[price][10]", id="search_class[price][10]")
+            span(style="width: 100%;")
+              label(for="search_class[price][10]", style="overflow: hidden; text-overflow: ellipsis;")
+                | $10
+                span.hint
+          .option_name(title="$20")
+            input(type="checkbox", name="search_class[price][20]", id="search_class[price][20]")
+            span(style="width: 100%;")
+              label(for="search_class[price][20]", style="overflow: hidden; text-overflow: ellipsis;")
+                | $20
+                span.hint
+          .option_name(title="$25")
+            input(type="checkbox", name="search_class[price][25]", id="search_class[price][25]")
+            span(style="width: 100%;")
+              label(for="search_class[price][25]", style="overflow: hidden; text-overflow: ellipsis;")
+                | $25
+                span.hint
+          .option_name(title="$50")
+            input(type="checkbox", name="search_class[price][50]", id="search_class[price][50]")
+            span(style="width: 100%;")
+              label(for="search_class[price][50]", style="overflow: hidden; text-overflow: ellipsis;")
+                | $50
+                span.hint
+          .option_name(title="$75")
+            input(type="checkbox", name="search_class[price][75]", id="search_class[price][75]")
+            span(style="width: 100%;")
+              label(for="search_class[price][75]", style="overflow: hidden; text-overflow: ellipsis;")
+                | $75
+                span.hint
+          .option_name(title="$100")
+            input(type="checkbox", name="search_class[price][100]", id="search_class[price][100]")
+            span(style="width: 100%;")
+              label(for="search_class[price][100]", style="overflow: hidden; text-overflow: ellipsis;")
+                | $100
+                span.hint
+          .option_name(title="$150")
+            input(type="checkbox", name="search_class[price][150]", id="search_class[price][150]")
+            span(style="width: 100%;")
+              label(for="search_class[price][150]", style="overflow: hidden; text-overflow: ellipsis;")
+                | $150
+                span.hint
+          .option_name(title="$200")
+            input(type="checkbox", name="search_class[price][200]", id="search_class[price][200]")
+            span(style="width: 100%;")
+              label(for="search_class[price][200]", style="overflow: hidden; text-overflow: ellipsis;")
+                | $200
+                span.hint
+          .option_name(title="$250")
+            input(type="checkbox", name="search_class[price][250]", id="search_class[price][250]")
+            span(style="width: 100%;")
+              label(for="search_class[price][250]", style="overflow: hidden; text-overflow: ellipsis;")
+                | $250
+                span.hint
+          .option_name(title="$300")
+            input(type="checkbox", name="search_class[price][300]", id="search_class[price][300]")
+            span(style="width: 100%;")
+              label(for="search_class[price][300]", style="overflow: hidden; text-overflow: ellipsis;")
+                | $300
+                span.hint
+          .option_name(title="$400")
+            input(type="checkbox", name="search_class[price][400]", id="search_class[price][400]")
+            span(style="width: 100%;")
+              label(for="search_class[price][400]", style="overflow: hidden; text-overflow: ellipsis;")
+                | $400
+                span.hint
+          .option_name(title="$500")
+            input(type="checkbox", name="search_class[price][500]", id="search_class[price][500]")
+            span(style="width: 100%;")
+              label(for="search_class[price][500]", style="overflow: hidden; text-overflow: ellipsis;")
+                | $500
+                span.hint
+          .option_name(title="$750")
+            input(type="checkbox", name="search_class[price][750]", id="search_class[price][750]")
+            span(style="width: 100%;")
+              label(for="search_class[price][750]", style="overflow: hidden; text-overflow: ellipsis;")
+                | $750
+                span.hint
+          .option_name(title="$1000")
+            input(type="checkbox", name="search_class[price][1000]", id="search_class[price][1000]")
+            span(style="width: 100%;")
+              label(for="search_class[price][1000]", style="overflow: hidden; text-overflow: ellipsis;")
+                | $1000
+                span.hint
+          .option_name(title="$1500")
+            input(type="checkbox", name="search_class[price][1500]", id="search_class[price][1500]")
+            span(style="width: 100%;")
+              label(for="search_class[price][1500]", style="overflow: hidden; text-overflow: ellipsis;")
+                | $1500
+                span.hint
+          .option_name(title="$2000")
+            input(type="checkbox", name="search_class[price][2000]", id="search_class[price][2000]")
+            span(style="width: 100%;")
+              label(for="search_class[price][2000]", style="overflow: hidden; text-overflow: ellipsis;")
+                | $2000
+                span.hint
+          .option_name(title="$5000")
+            input(type="checkbox", name="search_class[price][5000]", id="search_class[price][5000]")
+            span(style="width: 100%;")
+              label(for="search_class[price][5000]", style="overflow: hidden; text-overflow: ellipsis;")
+                | $5000
+                span.hint
+      div(style="text-align: center; float: left; width: 210px;")
+        h3 Select one or more attributes from the list
+        div(style="width: 180px; margin: 0px auto;")
+          input(type="button", value="Ok", onclick="hideDetails(); this.form.submit();")
+          input(type="button", value="Cancel", onclick="undoChanges(); hideDetails();")
+          input(type="button", value="Clear", onclick="clearOptions('price_filters');")
+      div(style="clear: both;")
+  #filter_numstocked.filterShells(style="display: none;")
+    #filter_inside_numstocked.filter_inside
+      div(style="width: 350px; float: left; margin: 5px;")
+        div(style="background: gray; color: white; padding: 5px; height: 20px; clear: both;")
+          label
+            span#attribute_heading_numstocked.option_name Inventory
+            span.option_num
+              // Total
+        #numstocked_filters.filters(style="font-size: 10pt;")
+          .option_name(title="Out of Stock")
+            input(type="checkbox", name="search_class[numstocked][Out of Stock]", id="search_class[numstocked][Out of Stock]")
+            span(style="width: 100%;")
+              label(for="search_class[numstocked][Out of Stock]", style="overflow: hidden; text-overflow: ellipsis;")
+                | Out of Stock
+                span.hint
+          .option_name(title="In Stock")
+            input(type="checkbox", name="search_class[numstocked][In Stock]", id="search_class[numstocked][In Stock]")
+            span(style="width: 100%;")
+              label(for="search_class[numstocked][In Stock]", style="overflow: hidden; text-overflow: ellipsis;")
+                | In Stock
+                span.hint
+      div(style="text-align: center; float: left; width: 210px;")
+        h3 Select one or more attributes from the list
+        div(style="width: 180px; margin: 0px auto;")
+          input(type="button", value="Ok", onclick="hideDetails(); this.form.submit();")
+          input(type="button", value="Cancel", onclick="undoChanges(); hideDetails();")
+          input(type="button", value="Clear", onclick="clearOptions('numstocked_filters');")
+      div(style="clear: both;")
+  #filter_discount.filterShells(style="display: none;")
+    #filter_inside_discount.filter_inside
+      div(style="width: 350px; float: left; margin: 5px;")
+        div(style="background: gray; color: white; padding: 5px; height: 20px; clear: both;")
+          label
+            span#attribute_heading_discount.option_name Discount
+            span.option_num
+              // Total
+        #discount_filters.filters(style="font-size: 10pt;")
+          .option_name(title="90% And More")
+            input(type="checkbox", name="search_class[discount][90% And More]", id="search_class[discount][90% And More]")
+            span(style="width: 100%;")
+              label(for="search_class[discount][90% And More]", style="overflow: hidden; text-overflow: ellipsis;")
+                | 90% And More
+                span.hint
+          .option_name(title="80% And More")
+            input(type="checkbox", name="search_class[discount][80% And More]", id="search_class[discount][80% And More]")
+            span(style="width: 100%;")
+              label(for="search_class[discount][80% And More]", style="overflow: hidden; text-overflow: ellipsis;")
+                | 80% And More
+                span.hint
+          .option_name(title="70% And More")
+            input(type="checkbox", name="search_class[discount][70% And More]", id="search_class[discount][70% And More]")
+            span(style="width: 100%;")
+              label(for="search_class[discount][70% And More]", style="overflow: hidden; text-overflow: ellipsis;")
+                | 70% And More
+                span.hint
+          .option_name(title="60% And More")
+            input(type="checkbox", name="search_class[discount][60% And More]", id="search_class[discount][60% And More]")
+            span(style="width: 100%;")
+              label(for="search_class[discount][60% And More]", style="overflow: hidden; text-overflow: ellipsis;")
+                | 60% And More
+                span.hint
+          .option_name(title="50% And More")
+            input(type="checkbox", name="search_class[discount][50% And More]", id="search_class[discount][50% And More]")
+            span(style="width: 100%;")
+              label(for="search_class[discount][50% And More]", style="overflow: hidden; text-overflow: ellipsis;")
+                | 50% And More
+                span.hint
+          .option_name(title="40% And More")
+            input(type="checkbox", name="search_class[discount][40% And More]", id="search_class[discount][40% And More]")
+            span(style="width: 100%;")
+              label(for="search_class[discount][40% And More]", style="overflow: hidden; text-overflow: ellipsis;")
+                | 40% And More
+                span.hint
+          .option_name(title="30% And More")
+            input(type="checkbox", name="search_class[discount][30% And More]", id="search_class[discount][30% And More]")
+            span(style="width: 100%;")
+              label(for="search_class[discount][30% And More]", style="overflow: hidden; text-overflow: ellipsis;")
+                | 30% And More
+                span.hint
+          .option_name(title="20% And More")
+            input(type="checkbox", name="search_class[discount][20% And More]", id="search_class[discount][20% And More]")
+            span(style="width: 100%;")
+              label(for="search_class[discount][20% And More]", style="overflow: hidden; text-overflow: ellipsis;")
+                | 20% And More
+                span.hint
+          .option_name(title="10% And More")
+            input(type="checkbox", name="search_class[discount][10% And More]", id="search_class[discount][10% And More]")
+            span(style="width: 100%;")
+              label(for="search_class[discount][10% And More]", style="overflow: hidden; text-overflow: ellipsis;")
+                | 10% And More
+                span.hint
+          .option_name(title="0% And More")
+            input(type="checkbox", name="search_class[discount][0% And More]", id="search_class[discount][0% And More]")
+            span(style="width: 100%;")
+              label(for="search_class[discount][0% And More]", style="overflow: hidden; text-overflow: ellipsis;")
+                | 0% And More
+                span.hint
+      div(style="text-align: center; float: left; width: 210px;")
+        h3 Select one or more attributes from the list
+        div(style="width: 180px; margin: 0px auto;")
+          input(type="button", value="Ok", onclick="hideDetails(); this.form.submit();")
+          input(type="button", value="Cancel", onclick="undoChanges(); hideDetails();")
+          input(type="button", value="Clear", onclick="clearOptions('discount_filters');")
+      div(style="clear: both;")
+  #filter_manufacturer.filterShells(style="display: none;")
+    #filter_inside_manufacturer.filter_inside
+      div(style="width: 350px; float: left; margin: 5px;")
+        div(style="background: gray; color: white; padding: 5px; height: 20px; clear: both;")
+          label
+            span#attribute_heading_manufacturer.option_name Manufacturer
+            span.option_num
+              // Total
+        #manufacturer_filters.filters(style="font-size: 10pt;")
+      div(style="text-align: center; float: left; width: 210px;")
+        h3 Select one or more attributes from the list
+        div(style="width: 180px; margin: 0px auto;")
+          input(type="button", value="Ok", onclick="hideDetails(); this.form.submit();")
+          input(type="button", value="Cancel", onclick="undoChanges(); hideDetails();")
+          input(type="button", value="Clear", onclick="clearOptions('manufacturer_filters');")
+      div(style="clear: both;")
+  #filter_new_for.filterShells(style="display: none;")
+    #filter_inside_new_for.filter_inside
+      div(style="width: 350px; float: left; margin: 5px;")
+        div(style="background: gray; color: white; padding: 5px; height: 20px; clear: both;")
+          label
+            span#attribute_heading_new_for.option_name New For
+            span.option_num
+              // Total
+        #new_for_filters.filters(style="font-size: 10pt;")
+          .option_name(title="2015")
+            input(type="checkbox", name="search_class[new_for][2015]", id="search_class[new_for][2015]")
+            span(style="width: 100%;")
+              label(for="search_class[new_for][2015]", style="overflow: hidden; text-overflow: ellipsis;")
+                | 2015
+                span.hint
+          .option_name(title="2014")
+            input(type="checkbox", name="search_class[new_for][2014]", id="search_class[new_for][2014]")
+            span(style="width: 100%;")
+              label(for="search_class[new_for][2014]", style="overflow: hidden; text-overflow: ellipsis;")
+                | 2014
+                span.hint
+          .option_name(title="2013")
+            input(type="checkbox", name="search_class[new_for][2013]", id="search_class[new_for][2013]")
+            span(style="width: 100%;")
+              label(for="search_class[new_for][2013]", style="overflow: hidden; text-overflow: ellipsis;")
+                | 2013
+                span.hint
+          .option_name(title="2012")
+            input(type="checkbox", name="search_class[new_for][2012]", id="search_class[new_for][2012]")
+            span(style="width: 100%;")
+              label(for="search_class[new_for][2012]", style="overflow: hidden; text-overflow: ellipsis;")
+                | 2012
+                span.hint
+          .option_name(title="2011")
+            input(type="checkbox", name="search_class[new_for][2011]", id="search_class[new_for][2011]")
+            span(style="width: 100%;")
+              label(for="search_class[new_for][2011]", style="overflow: hidden; text-overflow: ellipsis;")
+                | 2011
+                span.hint
+          .option_name(title="2010")
+            input(type="checkbox", name="search_class[new_for][2010]", id="search_class[new_for][2010]")
+            span(style="width: 100%;")
+              label(for="search_class[new_for][2010]", style="overflow: hidden; text-overflow: ellipsis;")
+                | 2010
+                span.hint
+          .option_name(title="2009")
+            input(type="checkbox", name="search_class[new_for][2009]", id="search_class[new_for][2009]")
+            span(style="width: 100%;")
+              label(for="search_class[new_for][2009]", style="overflow: hidden; text-overflow: ellipsis;")
+                | 2009
+                span.hint
+          .option_name(title="2008")
+            input(type="checkbox", name="search_class[new_for][2008]", id="search_class[new_for][2008]")
+            span(style="width: 100%;")
+              label(for="search_class[new_for][2008]", style="overflow: hidden; text-overflow: ellipsis;")
+                | 2008
+                span.hint
+          .option_name(title="2007")
+            input(type="checkbox", name="search_class[new_for][2007]", id="search_class[new_for][2007]")
+            span(style="width: 100%;")
+              label(for="search_class[new_for][2007]", style="overflow: hidden; text-overflow: ellipsis;")
+                | 2007
+                span.hint
+          .option_name(title="2006")
+            input(type="checkbox", name="search_class[new_for][2006]", id="search_class[new_for][2006]")
+            span(style="width: 100%;")
+              label(for="search_class[new_for][2006]", style="overflow: hidden; text-overflow: ellipsis;")
+                | 2006
+                span.hint
+      div(style="text-align: center; float: left; width: 210px;")
+        h3 Select one or more attributes from the list
+        div(style="width: 180px; margin: 0px auto;")
+          input(type="button", value="Ok", onclick="hideDetails(); this.form.submit();")
+          input(type="button", value="Cancel", onclick="undoChanges(); hideDetails();")
+          input(type="button", value="Clear", onclick="clearOptions('new_for_filters');")
+      div(style="clear: both;")
+  #match_count

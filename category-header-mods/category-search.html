@@ -1,0 +1,500 @@
+
+<form class="category-search">
+  <div class="basic-search">
+    <div class="search-keywords">
+      <input type="text" name="searchstring" value="" placeholder="Search this category" autocomplete="OFF" class="search-input-keywords"/><span class="search-button-go">
+        <input type="submit" value="GO"/></span>
+    </div>
+    <div class="search-button-clear"><a href="?searchstring=">Clear search...</a></div>
+    <div class="search-button-hide"><a href="#hide-search-dialog">Hide search dialog...</a></div>
+  </div>
+  <div class="search-dialog-controls">
+    <div class="search-button-clear"><a href="?searchstring=">Clear search...</a></div>
+    <div class="search-button-hide"><a href="#hide-search-dialog">Hide search dialog...</a></div>
+  </div>
+  <div class="advanced-search">
+    <div class="advanced-search-container">
+      <div class="row">
+        <div class="form-label search-age">Age:</div>
+        <div class="form-field search-age">select...</div>
+        <div class="form-label search-price">Price:</div>
+        <div class="form-field search-price">select...</div>
+        <div class="form-label search-prodtype">Product Types:</div>
+        <div class="form-field search-prodtype">select...</div>
+      </div>
+      <div class="row">
+        <div class="form-label search-gender">Gender:</div>
+        <div class="form-field search-gender">select...</div>
+        <div class="form-label search-discount">Discount:</div>
+        <div id="displayed_filter_discount" class="form-field search-discount">select...</div>
+        <div class="form-label search-manufacturer">Manufacturer:</div>
+        <div id="displayed_filter_manufacturer" class="form-field search-manufacturer">select...</div>
+      </div>
+      <div class="row">
+        <div class="form-label search-size">Size:</div>
+        <div class="form-field search-size">select...</div>
+        <div class="form-label search-inventory">Inventory:</div>
+        <div class="form-field search-inventory">select...</div>
+        <div class="form-label search-newfor">New For:</div>
+        <div id="displayed_filter_new_for" class="form-field search-newfor">select...</div>
+      </div>
+    </div>
+  </div>
+</form>
+<form id="frm_search_v3_refine" method="get" name="frm_search_v3_refine" action="">
+  <input type="hidden" name="order_search" value=""/>
+  <input id="ssavl" type="hidden" name="ssavl" value="1436104257"/>
+  <input type="hidden" name="items_per_page" value=""/>
+  <table id="search_filters" style="display:none">
+    <tr>
+      <td colspan="4" style="width:100%; padding-top:6px; padding-bottom:2px;">
+        <div id="search_field_outer">
+          <div id="search_field_left"></div>
+          <div id="search_field_middle">
+            <div id="search_field_select_shell" style="display: none;">
+              <div id="search_field_select_txt"><b id="search_field_cat_display">Superhero Costumes</b><img src="http://img.costumecraze.com/images/search_field_down_arr.png" style="width:10px; height:10px"/></div>
+              <select id="search_field_cat_select" name="search_field_cat_select">
+                <option value="">All categories</option>
+                <option value="cat_id=1118" selected="">Superhero Costumes</option>
+                <option value="customcat_id=1">Adult Costumes</option>
+                <option value="cat_id=154">Baby Costumes</option>
+                <option value="cat_id=833">Boots</option>
+                <option value="customcat_id=27">Boys Costumes</option>
+                <option value="cat_id=237">Capes</option>
+                <option value="customcat_id=19">Clearance</option>
+                <option value="cat_id=792">Contact Lenses</option>
+                <option value="cat_id=495">Costume Jewelry</option>
+                <option value="cat_id=132">Couples Costumes</option>
+                <option value="customcat_id=2">Dog Costumes</option>
+                <option value="cat_id=730">Funny Costumes</option>
+                <option value="customcat_id=28">Girls Costumes</option>
+                <option value="cat_id=351">Glasses</option>
+                <option value="cat_id=498">Gloves</option>
+                <option value="cat_id=493">Handbags</option>
+                <option value="cat_id=339">Hats</option>
+                <option value="customcat_id=29">Kids Costumes</option>
+                <option value="cat_id=834">Leg Warmers</option>
+                <option value="cat_id=438">Makeup</option>
+                <option value="cat_id=733">Mascot Costumes</option>
+                <option value="cat_id=413">Masks</option>
+                <option value="customcat_id=10">Mens Costumes</option>
+                <option value="customcat_id=26">On Sale</option>
+                <option value="cat_id=619">Party Decorations</option>
+                <option value="cat_id=427">Pirate Costumes</option>
+                <option value="cat_id=65">Plus Size Costumes</option>
+                <option value="cat_id=567">Princess Costumes</option>
+                <option value="cat_id=9">Sexy Costumes</option>
+                <option value="customcat_id=17">Shoes</option>
+                <option value="cat_id=624">Stockings</option>
+                <option value="cat_id=91">Superhero Costumes</option>
+                <option value="customcat_id=31">Teen Costumes</option>
+                <option value="customcat_id=30">Teenage Costumes</option>
+                <option value="cat_id=114">Traditional Costumes</option>
+                <option value="cat_id=293">Trick-or-Treat Bags</option>
+                <option value="cat_id=492">Weapons & Props</option>
+                <option value="cat_id=59">Wigs</option>
+                <option value="customcat_id=9">Womens Costumes</option>
+              </select>
+            </div>
+          </div>
+        </div>
+      </td>
+    </tr>
+  </table>
+  <div id="filter_class3" style="display: none;" class="filterShells">
+    <div id="filter_inside_class3" class="filter_inside">
+      <div style="width: 350px; float: left; margin: 5px;">
+        <div style="background: gray; color: white; padding: 5px; height: 20px; clear: both;">
+          <label><span id="attribute_heading_class3" class="option_name">Age</span><span class="option_num">
+              <!-- Total--></span></label>
+        </div>
+        <div id="class3_filters" style="font-size: 10pt;" class="filters">
+          <div title="(other)" class="option_name">
+            <input type="checkbox" name="search_class[class3][(other)]" id="search_class[class3][(other)]"/><span style="width: 100%;">
+              <label for="search_class[class3][(other)]" style="overflow: hidden; text-overflow: ellipsis;">(other)<span class="hint"></span></label></span>
+          </div>
+          <div title="Adult" class="option_name">
+            <input type="checkbox" name="search_class[class3][Adult]" id="search_class[class3][Adult]"/><span style="width: 100%;">
+              <label for="search_class[class3][Adult]" style="overflow: hidden; text-overflow: ellipsis;">Adult<span class="hint"></span></label></span>
+          </div>
+          <div title="Teen" class="option_name">
+            <input type="checkbox" name="search_class[class3][Teen]" id="search_class[class3][Teen]"/><span style="width: 100%;">
+              <label for="search_class[class3][Teen]" style="overflow: hidden; text-overflow: ellipsis;">Teen<span class="hint"></span></label></span>
+          </div>
+          <div title="Child" class="option_name">
+            <input type="checkbox" name="search_class[class3][Child]" id="search_class[class3][Child]"/><span style="width: 100%;">
+              <label for="search_class[class3][Child]" style="overflow: hidden; text-overflow: ellipsis;">Child<span class="hint"></span></label></span>
+          </div>
+          <div title="Dog" class="option_name">
+            <input type="checkbox" name="search_class[class3][Dog]" id="search_class[class3][Dog]"/><span style="width: 100%;">
+              <label for="search_class[class3][Dog]" style="overflow: hidden; text-overflow: ellipsis;">Dog<span class="hint"></span></label></span>
+          </div>
+        </div>
+      </div>
+      <div style="text-align: center; float: left; width: 210px;">
+        <h3>Select one or more attributes from the list</h3>
+        <div style="width: 180px; margin: 0px auto;">
+          <input type="button" value="Ok" onclick="hideDetails(); this.form.submit();"/>
+          <input type="button" value="Cancel" onclick="undoChanges(); hideDetails();"/>
+          <input type="button" value="Clear" onclick="clearOptions('class3_filters');"/>
+        </div>
+      </div>
+      <div style="clear: both;"></div>
+    </div>
+  </div>
+  <div id="filter_class4" style="display: none;" class="filterShells">
+    <div id="filter_inside_class4" class="filter_inside">
+      <div style="width: 350px; float: left; margin: 5px;">
+        <div style="background: gray; color: white; padding: 5px; height: 20px; clear: both;">
+          <label><span id="attribute_heading_class4" class="option_name">Product Types</span><span class="option_num">
+              <!-- Total--></span></label>
+        </div>
+        <div id="class4_filters" style="font-size: 10pt;" class="filters">
+          <div title="(other)" class="option_name">
+            <input type="checkbox" name="search_class[class4][(other)]" id="search_class[class4][(other)]"/><span style="width: 100%;">
+              <label for="search_class[class4][(other)]" style="overflow: hidden; text-overflow: ellipsis;">(other)<span class="hint"></span></label></span>
+          </div>
+          <div title="Costumes" class="option_name">
+            <input type="checkbox" name="search_class[class4][Costume]" id="search_class[class4][Costume]"/><span style="width: 100%;">
+              <label for="search_class[class4][Costume]" style="overflow: hidden; text-overflow: ellipsis;">Costumes<span class="hint"></span></label></span>
+          </div>
+          <div title="Accessories" class="option_name">
+            <input type="checkbox" name="search_class[class4][Accessory]" id="search_class[class4][Accessory]"/><span style="width: 100%;">
+              <label for="search_class[class4][Accessory]" style="overflow: hidden; text-overflow: ellipsis;">Accessories<span class="hint"></span></label></span>
+          </div>
+        </div>
+      </div>
+      <div style="text-align: center; float: left; width: 210px;">
+        <h3>Select one or more attributes from the list</h3>
+        <div style="width: 180px; margin: 0px auto;">
+          <input type="button" value="Ok" onclick="hideDetails(); this.form.submit();"/>
+          <input type="button" value="Cancel" onclick="undoChanges(); hideDetails();"/>
+          <input type="button" value="Clear" onclick="clearOptions('class4_filters');"/>
+        </div>
+      </div>
+      <div style="clear: both;"></div>
+    </div>
+  </div>
+  <div id="filter_class2" style="display: none;" class="filterShells">
+    <div id="filter_inside_class2" class="filter_inside">
+      <div style="width: 350px; float: left; margin: 5px;">
+        <div style="background: gray; color: white; padding: 5px; height: 20px; clear: both;">
+          <label><span id="attribute_heading_class2" class="option_name">Gender</span><span class="option_num">
+              <!-- Total--></span></label>
+        </div>
+        <div id="class2_filters" style="font-size: 10pt;" class="filters">
+          <div title="Female" class="option_name">
+            <input type="checkbox" name="search_class[class2][Female]" id="search_class[class2][Female]"/><span style="width: 100%;">
+              <label for="search_class[class2][Female]" style="overflow: hidden; text-overflow: ellipsis;">Female<span class="hint"></span></label></span>
+          </div>
+          <div title="Male" class="option_name">
+            <input type="checkbox" name="search_class[class2][Male]" id="search_class[class2][Male]"/><span style="width: 100%;">
+              <label for="search_class[class2][Male]" style="overflow: hidden; text-overflow: ellipsis;">Male<span class="hint"></span></label></span>
+          </div>
+          <div title="Uni" class="option_name">
+            <input type="checkbox" name="search_class[class2][Uni]" id="search_class[class2][Uni]"/><span style="width: 100%;">
+              <label for="search_class[class2][Uni]" style="overflow: hidden; text-overflow: ellipsis;">Uni<span class="hint"></span></label></span>
+          </div>
+        </div>
+      </div>
+      <div style="text-align: center; float: left; width: 210px;">
+        <h3>Select one or more attributes from the list</h3>
+        <div style="width: 180px; margin: 0px auto;">
+          <input type="button" value="Ok" onclick="hideDetails(); this.form.submit();"/>
+          <input type="button" value="Cancel" onclick="undoChanges(); hideDetails();"/>
+          <input type="button" value="Clear" onclick="clearOptions('class2_filters');"/>
+        </div>
+      </div>
+      <div style="clear: both;"></div>
+    </div>
+  </div>
+  <div id="filter_size" style="display: none;" class="filterShells">
+    <div id="filter_inside_size" class="filter_inside">
+      <div style="width: 350px; float: left; margin: 5px;">
+        <div style="background: gray; color: white; padding: 5px; height: 20px; clear: both;">
+          <label><span id="attribute_heading_size" class="option_name">Size</span><span class="option_num">
+              <!-- Total--></span></label>
+        </div>
+        <div id="size_filters" style="font-size: 10pt;" class="filters"></div>
+      </div>
+      <div style="text-align: center; float: left; width: 210px;">
+        <h3>Select one or more attributes from the list</h3>
+        <div style="width: 180px; margin: 0px auto;">
+          <input type="button" value="Ok" onclick="hideDetails(); this.form.submit();"/>
+          <input type="button" value="Cancel" onclick="undoChanges(); hideDetails();"/>
+          <input type="button" value="Clear" onclick="clearOptions('size_filters');"/>
+        </div>
+      </div>
+      <div style="clear: both;"></div>
+    </div>
+  </div>
+  <div id="filter_price" style="display: none;" class="filterShells">
+    <div id="filter_inside_price" class="filter_inside">
+      <div style="width: 350px; float: left; margin: 5px;">
+        <div style="background: gray; color: white; padding: 5px; height: 20px; clear: both;">
+          <label><span id="attribute_heading_price" class="option_name">Price</span><span class="option_num">
+              <!-- Total--></span></label>
+        </div>
+        <div id="price_filters" style="font-size: 10pt;" class="filters">
+          <div title="$1" class="option_name">
+            <input type="checkbox" name="search_class[price][1]" id="search_class[price][1]"/><span style="width: 100%;">
+              <label for="search_class[price][1]" style="overflow: hidden; text-overflow: ellipsis;">$1<span class="hint"></span></label></span>
+          </div>
+          <div title="$5" class="option_name">
+            <input type="checkbox" name="search_class[price][5]" id="search_class[price][5]"/><span style="width: 100%;">
+              <label for="search_class[price][5]" style="overflow: hidden; text-overflow: ellipsis;">$5<span class="hint"></span></label></span>
+          </div>
+          <div title="$10" class="option_name">
+            <input type="checkbox" name="search_class[price][10]" id="search_class[price][10]"/><span style="width: 100%;">
+              <label for="search_class[price][10]" style="overflow: hidden; text-overflow: ellipsis;">$10<span class="hint"></span></label></span>
+          </div>
+          <div title="$20" class="option_name">
+            <input type="checkbox" name="search_class[price][20]" id="search_class[price][20]"/><span style="width: 100%;">
+              <label for="search_class[price][20]" style="overflow: hidden; text-overflow: ellipsis;">$20<span class="hint"></span></label></span>
+          </div>
+          <div title="$25" class="option_name">
+            <input type="checkbox" name="search_class[price][25]" id="search_class[price][25]"/><span style="width: 100%;">
+              <label for="search_class[price][25]" style="overflow: hidden; text-overflow: ellipsis;">$25<span class="hint"></span></label></span>
+          </div>
+          <div title="$50" class="option_name">
+            <input type="checkbox" name="search_class[price][50]" id="search_class[price][50]"/><span style="width: 100%;">
+              <label for="search_class[price][50]" style="overflow: hidden; text-overflow: ellipsis;">$50<span class="hint"></span></label></span>
+          </div>
+          <div title="$75" class="option_name">
+            <input type="checkbox" name="search_class[price][75]" id="search_class[price][75]"/><span style="width: 100%;">
+              <label for="search_class[price][75]" style="overflow: hidden; text-overflow: ellipsis;">$75<span class="hint"></span></label></span>
+          </div>
+          <div title="$100" class="option_name">
+            <input type="checkbox" name="search_class[price][100]" id="search_class[price][100]"/><span style="width: 100%;">
+              <label for="search_class[price][100]" style="overflow: hidden; text-overflow: ellipsis;">$100<span class="hint"></span></label></span>
+          </div>
+          <div title="$150" class="option_name">
+            <input type="checkbox" name="search_class[price][150]" id="search_class[price][150]"/><span style="width: 100%;">
+              <label for="search_class[price][150]" style="overflow: hidden; text-overflow: ellipsis;">$150<span class="hint"></span></label></span>
+          </div>
+          <div title="$200" class="option_name">
+            <input type="checkbox" name="search_class[price][200]" id="search_class[price][200]"/><span style="width: 100%;">
+              <label for="search_class[price][200]" style="overflow: hidden; text-overflow: ellipsis;">$200<span class="hint"></span></label></span>
+          </div>
+          <div title="$250" class="option_name">
+            <input type="checkbox" name="search_class[price][250]" id="search_class[price][250]"/><span style="width: 100%;">
+              <label for="search_class[price][250]" style="overflow: hidden; text-overflow: ellipsis;">$250<span class="hint"></span></label></span>
+          </div>
+          <div title="$300" class="option_name">
+            <input type="checkbox" name="search_class[price][300]" id="search_class[price][300]"/><span style="width: 100%;">
+              <label for="search_class[price][300]" style="overflow: hidden; text-overflow: ellipsis;">$300<span class="hint"></span></label></span>
+          </div>
+          <div title="$400" class="option_name">
+            <input type="checkbox" name="search_class[price][400]" id="search_class[price][400]"/><span style="width: 100%;">
+              <label for="search_class[price][400]" style="overflow: hidden; text-overflow: ellipsis;">$400<span class="hint"></span></label></span>
+          </div>
+          <div title="$500" class="option_name">
+            <input type="checkbox" name="search_class[price][500]" id="search_class[price][500]"/><span style="width: 100%;">
+              <label for="search_class[price][500]" style="overflow: hidden; text-overflow: ellipsis;">$500<span class="hint"></span></label></span>
+          </div>
+          <div title="$750" class="option_name">
+            <input type="checkbox" name="search_class[price][750]" id="search_class[price][750]"/><span style="width: 100%;">
+              <label for="search_class[price][750]" style="overflow: hidden; text-overflow: ellipsis;">$750<span class="hint"></span></label></span>
+          </div>
+          <div title="$1000" class="option_name">
+            <input type="checkbox" name="search_class[price][1000]" id="search_class[price][1000]"/><span style="width: 100%;">
+              <label for="search_class[price][1000]" style="overflow: hidden; text-overflow: ellipsis;">$1000<span class="hint"></span></label></span>
+          </div>
+          <div title="$1500" class="option_name">
+            <input type="checkbox" name="search_class[price][1500]" id="search_class[price][1500]"/><span style="width: 100%;">
+              <label for="search_class[price][1500]" style="overflow: hidden; text-overflow: ellipsis;">$1500<span class="hint"></span></label></span>
+          </div>
+          <div title="$2000" class="option_name">
+            <input type="checkbox" name="search_class[price][2000]" id="search_class[price][2000]"/><span style="width: 100%;">
+              <label for="search_class[price][2000]" style="overflow: hidden; text-overflow: ellipsis;">$2000<span class="hint"></span></label></span>
+          </div>
+          <div title="$5000" class="option_name">
+            <input type="checkbox" name="search_class[price][5000]" id="search_class[price][5000]"/><span style="width: 100%;">
+              <label for="search_class[price][5000]" style="overflow: hidden; text-overflow: ellipsis;">$5000<span class="hint"></span></label></span>
+          </div>
+        </div>
+      </div>
+      <div style="text-align: center; float: left; width: 210px;">
+        <h3>Select one or more attributes from the list</h3>
+        <div style="width: 180px; margin: 0px auto;">
+          <input type="button" value="Ok" onclick="hideDetails(); this.form.submit();"/>
+          <input type="button" value="Cancel" onclick="undoChanges(); hideDetails();"/>
+          <input type="button" value="Clear" onclick="clearOptions('price_filters');"/>
+        </div>
+      </div>
+      <div style="clear: both;"></div>
+    </div>
+  </div>
+  <div id="filter_numstocked" style="display: none;" class="filterShells">
+    <div id="filter_inside_numstocked" class="filter_inside">
+      <div style="width: 350px; float: left; margin: 5px;">
+        <div style="background: gray; color: white; padding: 5px; height: 20px; clear: both;">
+          <label><span id="attribute_heading_numstocked" class="option_name">Inventory</span><span class="option_num">
+              <!-- Total--></span></label>
+        </div>
+        <div id="numstocked_filters" style="font-size: 10pt;" class="filters">
+          <div title="Out of Stock" class="option_name">
+            <input type="checkbox" name="search_class[numstocked][Out of Stock]" id="search_class[numstocked][Out of Stock]"/><span style="width: 100%;">
+              <label for="search_class[numstocked][Out of Stock]" style="overflow: hidden; text-overflow: ellipsis;">Out of Stock<span class="hint"></span></label></span>
+          </div>
+          <div title="In Stock" class="option_name">
+            <input type="checkbox" name="search_class[numstocked][In Stock]" id="search_class[numstocked][In Stock]"/><span style="width: 100%;">
+              <label for="search_class[numstocked][In Stock]" style="overflow: hidden; text-overflow: ellipsis;">In Stock<span class="hint"></span></label></span>
+          </div>
+        </div>
+      </div>
+      <div style="text-align: center; float: left; width: 210px;">
+        <h3>Select one or more attributes from the list</h3>
+        <div style="width: 180px; margin: 0px auto;">
+          <input type="button" value="Ok" onclick="hideDetails(); this.form.submit();"/>
+          <input type="button" value="Cancel" onclick="undoChanges(); hideDetails();"/>
+          <input type="button" value="Clear" onclick="clearOptions('numstocked_filters');"/>
+        </div>
+      </div>
+      <div style="clear: both;"></div>
+    </div>
+  </div>
+  <div id="filter_discount" style="display: none;" class="filterShells">
+    <div id="filter_inside_discount" class="filter_inside">
+      <div style="width: 350px; float: left; margin: 5px;">
+        <div style="background: gray; color: white; padding: 5px; height: 20px; clear: both;">
+          <label><span id="attribute_heading_discount" class="option_name">Discount</span><span class="option_num">
+              <!-- Total--></span></label>
+        </div>
+        <div id="discount_filters" style="font-size: 10pt;" class="filters">
+          <div title="90% And More" class="option_name">
+            <input type="checkbox" name="search_class[discount][90% And More]" id="search_class[discount][90% And More]"/><span style="width: 100%;">
+              <label for="search_class[discount][90% And More]" style="overflow: hidden; text-overflow: ellipsis;">90% And More<span class="hint"></span></label></span>
+          </div>
+          <div title="80% And More" class="option_name">
+            <input type="checkbox" name="search_class[discount][80% And More]" id="search_class[discount][80% And More]"/><span style="width: 100%;">
+              <label for="search_class[discount][80% And More]" style="overflow: hidden; text-overflow: ellipsis;">80% And More<span class="hint"></span></label></span>
+          </div>
+          <div title="70% And More" class="option_name">
+            <input type="checkbox" name="search_class[discount][70% And More]" id="search_class[discount][70% And More]"/><span style="width: 100%;">
+              <label for="search_class[discount][70% And More]" style="overflow: hidden; text-overflow: ellipsis;">70% And More<span class="hint"></span></label></span>
+          </div>
+          <div title="60% And More" class="option_name">
+            <input type="checkbox" name="search_class[discount][60% And More]" id="search_class[discount][60% And More]"/><span style="width: 100%;">
+              <label for="search_class[discount][60% And More]" style="overflow: hidden; text-overflow: ellipsis;">60% And More<span class="hint"></span></label></span>
+          </div>
+          <div title="50% And More" class="option_name">
+            <input type="checkbox" name="search_class[discount][50% And More]" id="search_class[discount][50% And More]"/><span style="width: 100%;">
+              <label for="search_class[discount][50% And More]" style="overflow: hidden; text-overflow: ellipsis;">50% And More<span class="hint"></span></label></span>
+          </div>
+          <div title="40% And More" class="option_name">
+            <input type="checkbox" name="search_class[discount][40% And More]" id="search_class[discount][40% And More]"/><span style="width: 100%;">
+              <label for="search_class[discount][40% And More]" style="overflow: hidden; text-overflow: ellipsis;">40% And More<span class="hint"></span></label></span>
+          </div>
+          <div title="30% And More" class="option_name">
+            <input type="checkbox" name="search_class[discount][30% And More]" id="search_class[discount][30% And More]"/><span style="width: 100%;">
+              <label for="search_class[discount][30% And More]" style="overflow: hidden; text-overflow: ellipsis;">30% And More<span class="hint"></span></label></span>
+          </div>
+          <div title="20% And More" class="option_name">
+            <input type="checkbox" name="search_class[discount][20% And More]" id="search_class[discount][20% And More]"/><span style="width: 100%;">
+              <label for="search_class[discount][20% And More]" style="overflow: hidden; text-overflow: ellipsis;">20% And More<span class="hint"></span></label></span>
+          </div>
+          <div title="10% And More" class="option_name">
+            <input type="checkbox" name="search_class[discount][10% And More]" id="search_class[discount][10% And More]"/><span style="width: 100%;">
+              <label for="search_class[discount][10% And More]" style="overflow: hidden; text-overflow: ellipsis;">10% And More<span class="hint"></span></label></span>
+          </div>
+          <div title="0% And More" class="option_name">
+            <input type="checkbox" name="search_class[discount][0% And More]" id="search_class[discount][0% And More]"/><span style="width: 100%;">
+              <label for="search_class[discount][0% And More]" style="overflow: hidden; text-overflow: ellipsis;">0% And More<span class="hint"></span></label></span>
+          </div>
+        </div>
+      </div>
+      <div style="text-align: center; float: left; width: 210px;">
+        <h3>Select one or more attributes from the list</h3>
+        <div style="width: 180px; margin: 0px auto;">
+          <input type="button" value="Ok" onclick="hideDetails(); this.form.submit();"/>
+          <input type="button" value="Cancel" onclick="undoChanges(); hideDetails();"/>
+          <input type="button" value="Clear" onclick="clearOptions('discount_filters');"/>
+        </div>
+      </div>
+      <div style="clear: both;"></div>
+    </div>
+  </div>
+  <div id="filter_manufacturer" style="display: none;" class="filterShells">
+    <div id="filter_inside_manufacturer" class="filter_inside">
+      <div style="width: 350px; float: left; margin: 5px;">
+        <div style="background: gray; color: white; padding: 5px; height: 20px; clear: both;">
+          <label><span id="attribute_heading_manufacturer" class="option_name">Manufacturer</span><span class="option_num">
+              <!-- Total--></span></label>
+        </div>
+        <div id="manufacturer_filters" style="font-size: 10pt;" class="filters"></div>
+      </div>
+      <div style="text-align: center; float: left; width: 210px;">
+        <h3>Select one or more attributes from the list</h3>
+        <div style="width: 180px; margin: 0px auto;">
+          <input type="button" value="Ok" onclick="hideDetails(); this.form.submit();"/>
+          <input type="button" value="Cancel" onclick="undoChanges(); hideDetails();"/>
+          <input type="button" value="Clear" onclick="clearOptions('manufacturer_filters');"/>
+        </div>
+      </div>
+      <div style="clear: both;"></div>
+    </div>
+  </div>
+  <div id="filter_new_for" style="display: none;" class="filterShells">
+    <div id="filter_inside_new_for" class="filter_inside">
+      <div style="width: 350px; float: left; margin: 5px;">
+        <div style="background: gray; color: white; padding: 5px; height: 20px; clear: both;">
+          <label><span id="attribute_heading_new_for" class="option_name">New For</span><span class="option_num">
+              <!-- Total--></span></label>
+        </div>
+        <div id="new_for_filters" style="font-size: 10pt;" class="filters">
+          <div title="2015" class="option_name">
+            <input type="checkbox" name="search_class[new_for][2015]" id="search_class[new_for][2015]"/><span style="width: 100%;">
+              <label for="search_class[new_for][2015]" style="overflow: hidden; text-overflow: ellipsis;">2015<span class="hint"></span></label></span>
+          </div>
+          <div title="2014" class="option_name">
+            <input type="checkbox" name="search_class[new_for][2014]" id="search_class[new_for][2014]"/><span style="width: 100%;">
+              <label for="search_class[new_for][2014]" style="overflow: hidden; text-overflow: ellipsis;">2014<span class="hint"></span></label></span>
+          </div>
+          <div title="2013" class="option_name">
+            <input type="checkbox" name="search_class[new_for][2013]" id="search_class[new_for][2013]"/><span style="width: 100%;">
+              <label for="search_class[new_for][2013]" style="overflow: hidden; text-overflow: ellipsis;">2013<span class="hint"></span></label></span>
+          </div>
+          <div title="2012" class="option_name">
+            <input type="checkbox" name="search_class[new_for][2012]" id="search_class[new_for][2012]"/><span style="width: 100%;">
+              <label for="search_class[new_for][2012]" style="overflow: hidden; text-overflow: ellipsis;">2012<span class="hint"></span></label></span>
+          </div>
+          <div title="2011" class="option_name">
+            <input type="checkbox" name="search_class[new_for][2011]" id="search_class[new_for][2011]"/><span style="width: 100%;">
+              <label for="search_class[new_for][2011]" style="overflow: hidden; text-overflow: ellipsis;">2011<span class="hint"></span></label></span>
+          </div>
+          <div title="2010" class="option_name">
+            <input type="checkbox" name="search_class[new_for][2010]" id="search_class[new_for][2010]"/><span style="width: 100%;">
+              <label for="search_class[new_for][2010]" style="overflow: hidden; text-overflow: ellipsis;">2010<span class="hint"></span></label></span>
+          </div>
+          <div title="2009" class="option_name">
+            <input type="checkbox" name="search_class[new_for][2009]" id="search_class[new_for][2009]"/><span style="width: 100%;">
+              <label for="search_class[new_for][2009]" style="overflow: hidden; text-overflow: ellipsis;">2009<span class="hint"></span></label></span>
+          </div>
+          <div title="2008" class="option_name">
+            <input type="checkbox" name="search_class[new_for][2008]" id="search_class[new_for][2008]"/><span style="width: 100%;">
+              <label for="search_class[new_for][2008]" style="overflow: hidden; text-overflow: ellipsis;">2008<span class="hint"></span></label></span>
+          </div>
+          <div title="2007" class="option_name">
+            <input type="checkbox" name="search_class[new_for][2007]" id="search_class[new_for][2007]"/><span style="width: 100%;">
+              <label for="search_class[new_for][2007]" style="overflow: hidden; text-overflow: ellipsis;">2007<span class="hint"></span></label></span>
+          </div>
+          <div title="2006" class="option_name">
+            <input type="checkbox" name="search_class[new_for][2006]" id="search_class[new_for][2006]"/><span style="width: 100%;">
+              <label for="search_class[new_for][2006]" style="overflow: hidden; text-overflow: ellipsis;">2006<span class="hint"></span></label></span>
+          </div>
+        </div>
+      </div>
+      <div style="text-align: center; float: left; width: 210px;">
+        <h3>Select one or more attributes from the list</h3>
+        <div style="width: 180px; margin: 0px auto;">
+          <input type="button" value="Ok" onclick="hideDetails(); this.form.submit();"/>
+          <input type="button" value="Cancel" onclick="undoChanges(); hideDetails();"/>
+          <input type="button" value="Clear" onclick="clearOptions('new_for_filters');"/>
+        </div>
+      </div>
+      <div style="clear: both;"></div>
+    </div>
+  </div>
+  <div id="match_count"></div>
+</form>
