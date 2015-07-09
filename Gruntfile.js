@@ -79,10 +79,10 @@ module.exports = function(grunt) {
 
   grunt.config.set('values', {
     src: {
-      coffee: ['**/*.coffee'],
-      jade: ['**/*.jade'],
-      sass: ['**/*.scss'],
-      browser: ['**/*.html', '**/*.css', '**/*.js']
+      coffee: ['**/*.coffee', '!**/dist/**', '!**/category-header-mods/**'],
+      jade: ['**/*.jade', '!**/dist/**', '!**/category-header-mods/**'],
+      sass: ['**/*.scss', '!**/dist/**', '!**/category-header-mods/**'],
+      browser: ['**/*.html', '**/*.css', '**/*.js', '!**/dist/**', '!**/category-header-mods/**']
     }
   });
 
