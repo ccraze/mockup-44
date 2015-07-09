@@ -1,0 +1,10 @@
+{
+  "version": 3,
+  "file": "$lib.js",
+  "sourceRoot": "",
+  "sources": [
+    "$lib.coffee"
+  ],
+  "names": [],
+  "mappings": "AAAA,CAAC,SAAA;AACC,MAAA;EAAA,OAAA,GAAU;;AAEV;;;;;;;;;EASA,YAAA,GAAe,SAAC,IAAD,EAAO,QAAP;AACb,WAAO,IAAI,CAAC,OAAL,CAAa,WAAb,EAAyB,UAAzB;EADM;;AAIf;;;EAGA,IAAA,GAAO,CAAC,SAAA,GAAA,CAAD;EAGP,OAAO,CAAC,IAAR,GAAe;AACf,SAAO;;AAEP;;;;;;;;;;;;;;AAzBD,CAAD,CAwCC,CAAC,IAxCF,CAwCO,IAxCP"
+}

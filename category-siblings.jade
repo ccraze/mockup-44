@@ -1,0 +1,48 @@
+style.
+  /*
+  ** we have to use a particularly specific selector here
+  ** to override the main stylesheet.
+  */
+  .category-header .category-siblings .sibling.#{catSiblingId} {
+    display: none;
+  }
+
+span.category-siblings
+  .sibling.all
+    a(href='./' title="All #{catTitle}") All
+    span.divider &thinsp;&middot;
+  .sibling.women
+    a(href='./women' title="#{catTitle} for Women") Women
+    span.divider &thinsp;&middot;
+  .sibling.men
+    a(href='./men' title="#{catTitle} for Men") Men
+    span.divider &thinsp;&middot;
+  .sibling.girls
+    a(href='./girls' title="#{catTitle} for Girls") Girls
+    span.divider &thinsp;&middot;
+  .sibling.boys
+    a(href='./boys' title="#{catTitle} for Boys") Boys
+    span.divider &thinsp;&middot;
+  .sibling.babies
+    a(href='./babies' title="#{catTitle} for Babies") Babies
+    span.divider &thinsp;&middot;
+  .sibling.toddler-girls
+    a(href='./toddler-girls' title="#{catTitle} for Toddler Girls") Toddler Girls
+    span.divider &thinsp;&middot;
+  .sibling.toddler-boys
+    a(href='./toddler-boys' title="#{catTitle} for Toddler Boys") Toddler Boys
+    span.divider &thinsp;&middot;
+  .sibling.womens-plus
+    a(href='./women-plus-size' title="#{catTitle} for Plus Size Women") Women's Plus
+    span.divider &thinsp;&middot;
+  .sibling.mens-plus
+    a(href='./men-plus-size' title="#{catTitle} for Plus Size Men") Men's Plus
+    span.divider &thinsp;&middot;
+  .sibling.teens
+    a(href='./teens' title="#{catTitle} for Teens") Teens
+    span.divider &thinsp;&middot;
+  .sibling.dogs
+    a(href='./dogs' title="#{catTitle} for Dogs") Dogs
+    span.divider &thinsp;&middot;
+  .sibling.accessories
+    a(href='.?search_class%5Bclass4%5D%5BAccessory%5D=on' title="Accessories for #{catTitle}") Accessories

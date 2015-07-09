@@ -1,0 +1,26 @@
+.category-header
+  .category-header-line1
+    .category-h1
+      h1
+        span.halloween Halloween
+        |  #{catSiblingTitle}
+      span.results-count
+        span.category-is-not-filtered (#{catProductCount} products)
+        span.category-is-filtered (found #{catSearchResultsCount} out of #{catProductCount} products)
+
+    .basic-search
+      form.category-search
+        .search-keywords
+          input.search-input-keywords(type="text", name="searchstring", value="", placeholder="Search this category" autocomplete="OFF")
+          span.search-button-go
+            input(type="submit", value="GO")
+
+    //- .search-toggle
+    //-   a(href="#") Search this Category
+
+  .category-header-search
+    include ./category-search.jade
+
+  .category-header-line3.inline-center
+    h2 More #[span.halloween Halloween] #{catTitle}&nbsp;for
+    include ./category-siblings.jade
