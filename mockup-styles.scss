@@ -107,23 +107,6 @@ $top-nav-transition-duration: .5s;
   letter-spacing: -1px;
 }
 
-/*
- * Begin non-semantic helper classes
- */
-.nowrap {
-  white-space: nowrap;
-}
-
-.bu {
-  font-weight: bold;
-  text-decoration: underline;
-}
-
-.inline-center {
-  display: inline-block;
-  text-align: center;
-}
-
 
 /*
  * i don't think i'm using this in mockups anymore.
@@ -209,26 +192,25 @@ fieldset#search_fields {
       min-width: 20em;
     }
 
-    // .search-toggle {
-    //   // display: table-cell;
-    //   display: none;
-    //   font-weight: bold;
-    //   font-size: 120%;
-    //   text-align: center;
-    //   vertical-align: middle;
-    //   background-color: $c5;
-    //   border-top: 2px $c1 solid;
-    //   border-bottom: 1px $c1 solid;
-    //   border-top-right-radius: $category-header-border-radius;
-    //   cursor: pointer;
+    .search-toggle {
+      display: table-cell;
+      font-weight: bold;
+      font-size: 120%;
+      text-align: center;
+      vertical-align: middle;
+      background-color: $c5;
+      border-top: 2px $c1 solid;
+      border-bottom: 1px $c1 solid;
+      border-top-right-radius: $category-header-border-radius;
+      cursor: pointer;
 
-    //   a {
-    //     color: $white;
-    //     display: block;
-    //     height: 100%;
-    //     width: 100%;
-    //   }
-    // }
+      a {
+        color: $white;
+        display: block;
+        height: 100%;
+        width: 100%;
+      }
+    }
   }
 
   .category-header-line3 {
@@ -403,6 +385,7 @@ fieldset#search_fields {
 */
 
 .basic-search {
+  width: 30%;
 
   .search-keywords {
     margin-top: .3em;
@@ -461,13 +444,12 @@ fieldset#search_fields {
   ** the category dropdown search dialog.
   */
   .basic-search {
-    // display: table-cell;
-    display: none;
+    display: table-cell;
   }
 
   .search-dialog-controls {
     display: table-cell;
-    vertical-align: middle;
+    vertical-align: top;
   }
 
   .advanced-search {
@@ -504,6 +486,27 @@ fieldset#search_fields {
 }
 
 
+/*
+ * Begin non-semantic helper classes
+ */
+.nowrap {
+  white-space: nowrap;
+}
+
+.bu {
+  font-weight: bold;
+  text-decoration: underline;
+}
+
+.inline-center {
+  display: inline-block;
+  text-align: center;
+}
+
+.hide {
+  // scss-lint:disable ImportantRule
+  display: none !important;
+}
 
 /*
  * These classes are being used in the mockup to show and hide
@@ -544,3 +547,4 @@ fieldset#search_fields {
 .nav-image-png {
   display: none;
 }
+

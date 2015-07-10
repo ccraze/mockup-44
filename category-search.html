@@ -1,17 +1,5 @@
 
 <form class="category-search">
-  <div class="basic-search">
-    <div class="search-keywords">
-      <input type="text" name="searchstring" value="" placeholder="Search this category" autocomplete="OFF" class="search-input-keywords"/><span class="search-button-go">
-        <input type="submit" value="GO"/></span>
-    </div>
-    <div class="search-button-clear"><a href="?searchstring=">Clear search...</a></div>
-    <div class="search-button-hide"><a href="#hide-search-dialog">Hide search dialog...</a></div>
-  </div>
-  <div class="search-dialog-controls">
-    <div class="search-button-clear"><a href="?searchstring=">Clear search...</a></div>
-    <div class="search-button-hide"><a href="#hide-search-dialog">Hide search dialog...</a></div>
-  </div>
   <div class="advanced-search">
     <div class="advanced-search-container">
       <div class="row">
@@ -39,6 +27,18 @@
         <div id="displayed_filter_new_for" class="form-field search-newfor">select...</div>
       </div>
     </div>
+  </div>
+  <div class="basic-search">
+    <div class="search-keywords">
+      <input type="text" name="searchstring" value="" placeholder="Search this category" autocomplete="OFF" class="search-input-keywords"/><span class="search-button-go">
+        <input type="submit" value="GO"/></span>
+    </div>
+    <div class="search-button-hide"><a href="#hide-search-dialog">Hide search dialog...</a></div>
+    <div class="search-button-clear"><a href="?searchstring=">Clear search...</a></div>
+  </div>
+  <div class="search-dialog-controls hide">
+    <div class="search-button-hide"><a href="#hide-search-dialog">Hide search dialog...</a></div>
+    <div class="search-button-clear"><a href="?searchstring=">Clear search...</a></div>
   </div>
 </form>
 <form id="frm_search_v3_refine" method="get" name="frm_search_v3_refine" action="">
