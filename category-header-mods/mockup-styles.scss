@@ -20,6 +20,14 @@ $grid-width: 998px; // for full-width elements that
                     // it took me a while to understand the
                     // grid system.
 
+$top-nav-purple: #8660ad;
+$top-nav-text-color: #fff;
+$top-nav-border-width: 2px;
+$top-nav-divider-opacity: .2;
+$top-nav-border-radius: .5em;
+$top-nav-transition-duration: .5s;
+
+
 /*
  * Begin styles that are intended to replace current
  * costumecraze.com styles. These are not new selectors.
@@ -210,16 +218,16 @@ fieldset#search_fields {
     background-color: $c5;
     margin: 0;
     padding: .5em 1em;
-    // display: table;
+    display: table;
     box-sizing: border-box;
     width: 100%;
 
     h2 {
       color: $category-sibling-header-color;
       // display: inline-block;
-      // display: table-cell;
+      display: table-cell;
       // display: inline;
-      display: none;
+      // display: none;
       // padding: 0 .5em 0 0;
       font-weight: bold;
       // text-align: right;
@@ -227,9 +235,22 @@ fieldset#search_fields {
       line-height: 1.1em;
     }
 
+    span.nav-divider {
+      display: table-cell;
+      vertical-align: middle;
+      text-align: center;
+      color: $top-nav-text-color;
+
+      img {
+        opacity: $top-nav-divider-opacity;
+        width: 1px;
+        height: 60%;
+      }
+    }
+
     .category-siblings {
       vertical-align: baseline;
-      // display: table-cell;
+      display: table-cell;
       // display: inline-block;
       font-size: 1.1em;
       line-height: 1.1em;
@@ -262,13 +283,6 @@ fieldset#search_fields {
   border-right: 5px $c5 solid;
 }
 
-
-$top-nav-purple: #8660ad;
-$top-nav-text-color: #fff;
-$top-nav-border-width: 2px;
-$top-nav-divider-opacity: .2;
-$top-nav-border-radius: .5em;
-$top-nav-transition-duration: .5s;
 
 .top-nav {
   width: $grid-width;
