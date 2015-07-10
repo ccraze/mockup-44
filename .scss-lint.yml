@@ -21,3 +21,5 @@ linters:
     enabled: false
   ColorVariable:
     enabled: false
+  HexLength:
+    enabled: false
