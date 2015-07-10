@@ -2,14 +2,16 @@ $(->
   $searchToggle = $('.search-toggle')
   $searchHide   = $('.search-button-hide > a')
   $searchDialog = $('.category-header-search')
-  $basicSearch = $('.category-header-line1 .basic-search')
+  $headerBasicSearch = $('.category-header-line1 .basic-search')
+  $dialogBasicSearch = $('.category-search .basic-search')
 
   hideSearchDialog = (event) ->
     event?.preventDefault()
 
     $searchDialog.hide('fast');
     $searchDialog.data('state', 'hide')
-    $basicSearch.css('border-color': '#bef67e')
+    $headerBasicSearch.css('border-color': '#bef67e')
+    $searchToggle.css('border-color': '#bef67e')
 
     return
 
@@ -18,24 +20,29 @@ $(->
 
     $searchDialog.show('fast');
     $searchDialog.data('state', 'show')
-    $basicSearch.css('border-color': '#6a9a2a')
+    $headerBasicSearch.css('border-color': '#6a9a2a')
+    $searchToggle.css('border-color': '#6a9a2a')
+
+    $dialogBasicSearch.find('input[type="text"]').focus()
 
     return
 
   toggleSearchDialog = (event) ->
     event?.preventDefault()
 
+    console.log('toggle search dialog. this: ', this)
+
     if ($searchDialog.data('state') == 'show')
       hideSearchDialog(event)
+      $(this).find('a').blur()
     else
       showSearchDialog(event)
 
     return
 
-  #$searchToggle.click(toggleSearchDialog)
+  $searchToggle.click(toggleSearchDialog)
   $searchHide.click(hideSearchDialog)
-  $basicSearch.click(showSearchDialog)
-
+  $headerBasicSearch.click(showSearchDialog)
 
 
   ###

@@ -1,21 +1,5 @@
 form.category-search
 
-  .basic-search
-    .search-keywords
-      input.search-input-keywords(type="text", name="searchstring", value="", placeholder="Search this category" autocomplete="OFF")
-      span.search-button-go
-        input(type="submit", value="GO")
-    .search-button-clear
-      a(href="?searchstring=") Clear search...
-    .search-button-hide
-      a(href="#hide-search-dialog") Hide search dialog...
-
-  .search-dialog-controls
-    .search-button-clear
-      a(href="?searchstring=") Clear search...
-    .search-button-hide
-      a(href="#hide-search-dialog") Hide search dialog...
-
   .advanced-search
     .advanced-search-container
       .row
@@ -65,6 +49,23 @@ form.category-search
           | New For:
         #displayed_filter_new_for.form-field.search-newfor
           | select...
+
+  .basic-search
+    .search-keywords
+      input.search-input-keywords(type="text", name="searchstring", value="", placeholder="Search this category" autocomplete="OFF")
+      span.search-button-go
+        input(type="submit", value="GO")
+    .search-button-hide
+      a(href="#hide-search-dialog") Hide search dialog...
+    .search-button-clear
+      a(href="?searchstring=") Clear search...
+
+  .search-dialog-controls.hide
+    .search-button-hide
+      a(href="#hide-search-dialog") Hide search dialog...
+    .search-button-clear
+      a(href="?searchstring=") Clear search...
+
 
 form#frm_search_v3_refine(method="get", name="frm_search_v3_refine", action="")
   input(type="hidden", name="order_search", value="")

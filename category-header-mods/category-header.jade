@@ -8,20 +8,27 @@
         span.category-is-not-filtered (#{catProductCount} products)
         span.category-is-filtered (found #{catSearchResultsCount} out of #{catProductCount} products)
 
-    .basic-search
+    .basic-search.hide
       form.category-search
         .search-keywords
           input.search-input-keywords(type="text", name="searchstring", value="", placeholder="Search this category" autocomplete="OFF")
           span.search-button-go
             input(type="submit", value="GO")
 
-    //- .search-toggle
-    //-   a(href="#") Search this Category
+    .search-toggle
+      a(href="#") Search this Category
 
   .category-header-search
     include ./category-search.jade
 
-  .category-header-line3.inline-center.as-table
+  //
+    to layout the category siblings as a table, with a label on the
+    left, followed by a divider, and then the list of siblings on
+    the right, add the class '.as-table' to .category-header-line3.
+
+    to display it as a flowing list preceded by a label. add the
+    class '.inline-center'
+  .category-header-line3.inline-center
     h2 #[span.halloween Halloween] #{catTitle}&nbsp;for
     span.nav-divider-v2
     include ./category-siblings.jade
