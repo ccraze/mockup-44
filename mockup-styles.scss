@@ -10,8 +10,17 @@ $c2: #d8ff98;
 $c3: #efffd6;
 $c4: #9dcd5d;
 $c5: #6a9a2a;
-//$category-sibling-header-color: #8b0000;
-$category-sibling-header-color: $purple4;
+
+$darkred: #8b0000;
+
+$lightyellow1: #ffffe0;
+$lightyellow2: #ffffcc;
+$lightyellow3: #ffff99;
+
+
+//$category-sibling-label-color: #8b0000;
+$category-sibling-label-color: $purple4;
+$category-sibling-label-color: $lightyellow3;
 $category-sibling-link-color: $white;
 
 $category-header-border-radius: 5px;
@@ -19,6 +28,23 @@ $grid-width: 998px; // for full-width elements that
                     // aren't using the grid. mostly because
                     // it took me a while to understand the
                     // grid system.
+
+$top-nav-purple: #8660ad;
+$top-nav-text-color: #fff;
+$top-nav-border-width: 2px;
+$top-nav-divider-opacity: .2;
+$top-nav-border-radius: .5em;
+$top-nav-transition-duration: .5s;
+
+.nav-divider-v2 {
+  background-image: url('white-pixel.png');
+  background-size: 1px 90%;
+  background-position: center 50%;
+  background-repeat: no-repeat;
+  opacity: .3;
+  width: 1px;
+}
+
 
 /*
  * Begin styles that are intended to replace current
@@ -209,31 +235,31 @@ fieldset#search_fields {
     font-size: 100%;
     background-color: $c5;
     margin: 0;
-    padding: .5em 1em;
-    // display: table;
+    padding: .4em 1em;
     box-sizing: border-box;
     width: 100%;
 
     h2 {
-      color: $category-sibling-header-color;
-      // display: inline-block;
-      // display: table-cell;
-      // display: inline;
-      display: none;
-      // padding: 0 .5em 0 0;
+      color: $category-sibling-label-color;
+      display: inline;
       font-weight: bold;
-      // text-align: right;
       font-size: 1.1em;
-      line-height: 1.1em;
+      line-height: 1.2em;
+
+      &:after {
+        content: ':';
+      }
+    }
+
+    span.nav-divider-v2 {
+      display: none;
     }
 
     .category-siblings {
       vertical-align: baseline;
-      // display: table-cell;
-      // display: inline-block;
+      display: inline;
       font-size: 1.1em;
-      line-height: 1.1em;
-      // text-align: center;
+      line-height: 1.2em;
 
       .sibling {
         display: inline-block;
@@ -242,6 +268,7 @@ fieldset#search_fields {
 
         .divider {
           color: $white;
+          opacity: .5;
           // margin: .2em;
         }
 
@@ -251,7 +278,33 @@ fieldset#search_fields {
       }
 
     }
+
+    &.as-table {
+      display: table;
+
+      h2 {
+        display: table-cell;
+        padding: 0;
+        text-align: right;
+
+        &:after {
+          content: '';
+        }
+      }
+
+      span.nav-divider-v2 {
+        display: table-cell;
+        width: 2em;
+      }
+
+      .category-siblings {
+        vertical-align: baseline;
+        display: table-cell;
+        text-align: left;
+      }
+    }
   }
+
 }
 
 .category-header-search {
@@ -262,13 +315,6 @@ fieldset#search_fields {
   border-right: 5px $c5 solid;
 }
 
-
-$top-nav-purple: #8660ad;
-$top-nav-text-color: #fff;
-$top-nav-border-width: 2px;
-$top-nav-divider-opacity: .2;
-$top-nav-border-radius: .5em;
-$top-nav-transition-duration: .5s;
 
 .top-nav {
   width: $grid-width;

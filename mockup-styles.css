@@ -1,3 +1,11 @@
+.nav-divider-v2 {
+  background-image: url("white-pixel.png");
+  background-size: 1px 90%;
+  background-position: center 50%;
+  background-repeat: no-repeat;
+  opacity: .3;
+  width: 1px; }
+
 /*
  * Begin styles that are intended to replace current
  * costumecraze.com styles. These are not new selectors.
@@ -138,27 +146,48 @@ fieldset#search_fields {
     font-size: 100%;
     background-color: #6a9a2a;
     margin: 0;
-    padding: .5em 1em;
+    padding: .4em 1em;
     box-sizing: border-box;
     width: 100%; }
     .category-header .category-header-line3 h2 {
-      color: #203;
-      display: none;
+      color: #ffff99;
+      display: inline;
       font-weight: bold;
       font-size: 1.1em;
-      line-height: 1.1em; }
+      line-height: 1.2em; }
+      .category-header .category-header-line3 h2:after {
+        content: ':'; }
+    .category-header .category-header-line3 span.nav-divider-v2 {
+      display: none; }
     .category-header .category-header-line3 .category-siblings {
       vertical-align: baseline;
+      display: inline;
       font-size: 1.1em;
-      line-height: 1.1em; }
+      line-height: 1.2em; }
       .category-header .category-header-line3 .category-siblings .sibling {
         display: inline-block;
         vertical-align: baseline;
         white-space: nowrap; }
         .category-header .category-header-line3 .category-siblings .sibling .divider {
-          color: #fff; }
+          color: #fff;
+          opacity: .5; }
         .category-header .category-header-line3 .category-siblings .sibling a {
           color: #fff; }
+    .category-header .category-header-line3.as-table {
+      display: table; }
+      .category-header .category-header-line3.as-table h2 {
+        display: table-cell;
+        padding: 0;
+        text-align: right; }
+        .category-header .category-header-line3.as-table h2:after {
+          content: ''; }
+      .category-header .category-header-line3.as-table span.nav-divider-v2 {
+        display: table-cell;
+        width: 2em; }
+      .category-header .category-header-line3.as-table .category-siblings {
+        vertical-align: baseline;
+        display: table-cell;
+        text-align: left; }
 
 .category-header-search {
   display: none;
